@@ -1,0 +1,237 @@
+* {
+  accent-color: #f60;
+  font-family: Roboto;
+}
+html {
+  scroll-behavior: smooth;
+}
+.focus-eE {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  outline: none;
+}
+.focus-eE:focus {
+  border: 1px solid #fcb17f !important;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25) !important;
+}
+li:not(.norms__item) {
+  list-style: none;
+}
+li.norms__item::marker {
+  font-weight: 400;
+  margin-inline-end: 0.5rem;
+}
+.btn.btn-reply,
+.btn-like {
+  background: transparent;
+}
+.btn.btn-like {
+  height: 2rem;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.btn-close-overlay svg {
+  height: 1rem;
+  opacity: 0.5;
+}
+.btn:focus,
+input:focus,
+textarea:focus {
+  border: 1px solid #fcb17f !important;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25) !important;
+}
+.rounded-xs {
+  border-radius: 0.15rem !important;
+  -webkit-border-radius: 0.15rem !important;
+  -moz-border-radius: 0.15rem !important;
+  -ms-border-radius: 0.15rem !important;
+  -o-border-radius: 0.15rem !important;
+}
+.btn.btn-like:hover svg,
+.liked svg {
+  fill: #f60;
+}
+.btn.btn-like:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+.btn.outline-light:focus {
+  box-shadow: none;
+}
+.total-like,
+.total-dislike,
+.btn-reply__span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.label-input {
+  cursor: pointer;
+  user-select: none;
+}
+.btn svg,
+.btn span {
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  z-index: 99999990;
+}
+dialog {
+  background: white;
+  display: block;
+  inset: 0;
+  margin: auto;
+  padding-block: 3rem;
+  padding-inline: 2rem;
+  width: min(400px, 95%);
+}
+@media (orientation: landscape) {
+  dialog {
+    overflow: auto;
+    max-height: 90vh;
+  }
+}
+.btn-forgot-password{ 
+  font-size: .9rem;
+  color: #f60; 
+}
+.btn-close-overlay {
+  aspect-ratio: 1;
+  background: transparent;
+  cursor: pointer;
+  height: 2.5rem;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+}
+.input-span {
+  position: absolute;
+  z-index: 1;
+  top: 0.25rem;
+}
+.form-sign-up__title {
+  font-family: Georgia, Times New Roman, Times, serif;
+  font-size: 1.5rem;
+  line-height: 48px;
+  word-spacing: -0.06em;
+}
+.norms__title {
+  line-height: 48px;
+  font-weight: 500;
+}
+.option-comment-overlay {
+  inset: 0;
+  z-index: 1;
+}
+.option-comment {
+  border: none;
+  border-radius: 0.15rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  -ms-border-radius: 0.15rem;
+  -o-border-radius: 0.15rem;
+  box-shadow: 6.7px 6.7px 19.4px rgba(0, 0, 0, 0.024),
+    22.3px 22.3px 65.2px rgba(0, 0, 0, 0.036),
+    100px 100px 292px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+  overflow: hidden;
+  right: 0;
+  top: 100%;
+}
+.option-comment ul {
+  z-index: 2;
+}
+.option-comment__btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.comment__form--label .comment__form-input {
+  font-size: 0.9rem;
+}
+
+.cards-comments__comment-text {
+  word-break: break-all;
+}
+
+dialog.content {
+  width: min(1200px, 95%);
+  max-height: 95vh;
+}
+dialog.content-norms {
+  width: min(600px, 95%);
+}
+.font-normal {
+  font-weight: 400;
+}
+.sign-up__image {
+  background: url("data:image/svg+xml,%3Csvg width='1624' height='424' viewBox='0 0 1624 424' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 184.98L1284.47 279.499V424H0V184.98Z' fill='%23F1F1F1'/%3E%3Cpath d='M0 362.344L1623.25 0V424H0V362.344Z' fill='%23FF6600'/%3E%3C/svg%3E%0A")
+    bottom center no-repeat;
+  background-size: contain, 250px;
+  background-color: rgba(240, 240, 240, 0.12);
+}
+.comment__form {
+  width: min(400px, 100%);
+  margin: auto;
+}
+.comment__form label {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+label .text-xs {
+  font-size: 0.8rem;
+}
+.thread {
+  margin-left: 1.25rem !important;
+}
+button[aria-selected="false"] ~ ul.thread {
+  display: none;
+}
+
+/* tools */
+
+.bg-economista {
+  background: #f60;
+}
+.text-economista {
+  color: #f60;
+}
+.bg-economista:hover {
+  background: rgba(245, 152, 90, 1);
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.font-semibold {
+  font-weight: 500;
+}
+.border-tansparent {
+  border-color: transparent !important;
+}
+.animate-spin {
+  animation: spin 0.9s infinite linear;
+  -webkit-animation: spin 0.9s infinite linear;
+}
+.outline-none:focus {
+  outline: none;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

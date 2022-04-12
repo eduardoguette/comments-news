@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <footer class="articleZone_Footer bg-white" id="comments" aria-label="Zona de comentarios">
+    <div class="mainComments" mod="11191">
+      <script src="https://apis.google.com/js/platform.js?onload=initGoogle"></script>
+      <script type="text/javascript">
+        function initGoogle() {
+          gapi.load('auth2', function () {
+            gapi.auth2.init({ client_id: '724984939900.apps.googleusercontent.com' });
+          });
+        }
+      </script>
+      <section class="comments">
+        <form action="https://www.eleconomista.es/blogs/en-portada/wp-comments-post_ab3da3.php" method="post"
+          id="write-comment" name="commentform"
+          class="mainComments_Form wrapper col-12 col-md-8 col-lg-7 col-xl-5 mx-auto">
+          <h3 class="py-2 h4" id="forum">Comentarios <span id="total-comments">1</span></h3>
+          <div class="form m-auto w-100 px-0">
+            <textarea class="w-100 py-3 px-3 focus-eE rounded-xs" data-dialog-open placeholder="¡Escribe un comentario!"
+              name="comment-area" aria-label="Area de comentarios" id="comment-area" cols="30" rows="3"
+              required></textarea>
+          </div>
+          <label class="label-input mt-2 d-block w-100 px-0 mx-auto " for="ter-cond"
+            aria-label="Aceptar terminos y condiciones">
+            <input required type="checkbox" name="ter-cond" id="ter-cond" class="focus-eE rounded-xs">
+            <span>
+              Acepto la&nbsp;<a href="https://www.eleconomista.es/politica-de-privacidad/index-2018-05-25.php"
+                target="_blank" class="text-economista btn outline-light p-0 focus-eE rounded-xs border-tansparent">
+                política de
+                privacidad</a> </span>
+          </label>
+          <label class="label-input mt-2 d-block w-100 px-0 mx-auto d-flex align-items-center" for="norms"
+            aria-label="Aceptar terminos y condiciones" aria-selected="false">
+            <input required type="checkbox" name="normas" id="norms" class="focus-eE rounded-xs" required>&nbsp;
+            <span class="pointer-events-none">Normas de la </span>&nbsp;
+            <button id="btn-comunidad" type="button"
+              class=" bg-transparent border-tansparent text-economista btn outline-light p-0 focus-eE rounded-xs"
+              data-community-norms-open>comunidad</button>
+          </label>
+          <button type="submit" id="send-comment" data-dialog-open
+            class="mt-3 btn w-100 mx-auto d-block bg-economista bg-economista focus-eE rounded-xs outline-light"
+            aria-label="Enviar comentario">
+            <svg class="animate-spin d-none mr-2" xmlns="http://www.w3.org/2000/svg" height="18" width="18" fill="none"
+              viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="white"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+              </path>
+            </svg>
+
+            Enviar
+          </button>
+        </form>
+        <div class="comments__list col-12 col-md-8 col-lg-7 col-xl-5 mx-auto mt-5">
+          <ul id="list-comments" class="m-0 p-0">
+
+
+          </ul>
+        </div>
+
+      </section>
+    </div> 
+    <div id="log-comments" data-log>
+      <div class="overlay" data-dialog-hide hidden>
+        <dialog class="border position-absolute animate__animated">
+          <button data-dialog-hide
+            class="position-absolute btn-close-overlay rounded-xs btn border-0 outline-light px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <section class="header-logo mb-5">
+            <img class="my-3 w-100 mx-auto" loading="lazy"
+              src="//s03.s3c.es/imag3/logos/economista/svg/economista15-aniv.svg" alt="elEconomista.es" width="200"
+              height="42.85" pinger-seen="true">
+          </section>
+          <section class="btn-socials d-flex justify-content-center flex-column">
+            <button class="btn border btn-socials-btn d-flex mb-3 focus-eE rounded-xs bg-transparent ">
+              <svg class="mr-auto d-block" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                  fill="#FFC107"></path>
+                <path
+                  d="M3.15283 7.3455L6.43833 9.755C7.32733 7.554 9.48033 6 11.9998 6C13.5293 6 14.9208 6.577 15.9803 7.5195L18.8088 4.691C17.0228 3.0265 14.6338 2 11.9998 2C8.15883 2 4.82783 4.1685 3.15283 7.3455Z"
+                  fill="#FF3D00"></path>
+                <path
+                  d="M12.0002 21.9999C14.5832 21.9999 16.9302 21.0114 18.7047 19.4039L15.6097 16.7849C14.5719 17.574 13.3039 18.0009 12.0002 17.9999C9.39916 17.9999 7.19066 16.3414 6.35866 14.0269L3.09766 16.5394C4.75266 19.7779 8.11366 21.9999 12.0002 21.9999Z"
+                  fill="#4CAF50"></path>
+                <path
+                  d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                  fill="#1976D2"></path>
+              </svg>
+              <span class="m-auto d-block w-100">Entra con Google</span></button>
+            <button class="btn border btn-socials-btn d-flex mb-3 focus-eE rounded-xs bg-transparent ">
+
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="vertical-align:middle;"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M18.8962 20.0001C19.5057 20.0001 20 19.5059 20 18.8962V1.10383C20 0.494141 19.5057 0 18.8962 0H1.10383C0.494062 0 0 0.494141 0 1.10383V18.8962C0 19.5059 0.494062 20.0001 1.10383 20.0001H18.8962Z"
+                    fill="#395185"></path>
+                  <path
+                    d="M13.7995 19.9999V12.2548H16.3993L16.7885 9.23644H13.7995V7.30926C13.7995 6.43535 14.0423 5.8398 15.2955 5.8398L16.8938 5.8391V3.13949C16.6173 3.1027 15.6685 3.02051 14.5648 3.02051C12.2602 3.02051 10.6826 4.42715 10.6826 7.01043V9.23644H8.07617V12.2548H10.6826V19.9999H13.7995Z"
+                    fill="white"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="20" height="20" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="m-auto d-block w-100">Entra con Facebook</span></button>
+            <button class="btn border btn-socials-btn d-flex mb-3 focus-eE rounded-xs bg-transparent ">
+
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" style="vertical-align:middle;"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.1803 17.0412H15.1148V12.4004C15.1148 11.2937 15.0943 9.86911 13.5204 9.86911C11.9237 9.86911 11.6794 11.0749 11.6794 12.3198V17.0409H8.61393V7.49747H11.5568V8.80169H11.598C11.8925 8.31489 12.3181 7.91443 12.8294 7.64295C13.3408 7.37147 13.9187 7.23914 14.5017 7.26005C17.6088 7.26005 18.1816 9.23567 18.1816 11.8058L18.1803 17.0412ZM5.15488 6.19302C4.17237 6.19317 3.37573 5.42333 3.37557 4.47356C3.37541 3.5238 4.17172 2.75372 5.15424 2.75356C6.13675 2.75333 6.93338 3.52317 6.93355 4.47294C6.93363 4.92903 6.74629 5.36648 6.41273 5.68906C6.07916 6.01163 5.62671 6.19291 5.15488 6.19302ZM6.6877 17.0413H3.61892V7.49747H6.68761V17.0412L6.6877 17.0413ZM19.7086 0.00145562H2.07851C1.24527 -0.00760688 0.561941 0.637627 0.551758 1.4431V18.5566C0.561618 19.3625 1.24486 20.0083 2.07843 19.9999H19.7086C20.5439 20.0099 21.2299 19.364 21.2414 18.5566V1.44177C21.2295 0.634737 20.5435 -0.0104194 19.7086 0.000127492"
+                  fill="#0A66C2"></path>
+              </svg>
+
+              <span class="m-auto d-block w-100">Entra con Linkedin</span></button>
+            <div class="modal-separator d-flex align-items-center">
+              <div class="d-block border w-100"></div>
+              <span class="d-block px-3 text-muted">o</span>
+              <div class="d-block border w-100"></div>
+            </div>
+            <button class="btn border btn-socials-btn d-flex mb-4 focus-eE rounded-xs bg-transparent " data-sign-up-open
+              data-dialog-hide>
+
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                  fill="black"></path>
+              </svg>
+
+              <span class="m-auto d-block w-100" style="pointer-events: none;">Regístrate con otro email</span>
+            </button>
+
+          </section>
+          <form class="comment__form d-flex flex-column d-block" id="form-log">
+            <span class="badge text-danger d-none mb-2 text-left">Por favor, verifique su email o contraseña</span>
+
+            <label class="comment__form--label w-full d-block position-relative" for="email">
+              <span class="d-block input-span pl-2">Email</span>
+              <input type="text" name="email"
+                class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="email" required>
+            </label>
+            <label class="comment__form--label w-full d-block position-relative" for="password">
+              <span class="d-block input-span pl-2">Contraseña</span>
+              <input type="password" name="password"
+                class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="password"
+                required>
+            </label>
+            
+            <button
+              class="btn w-100 bg-economista  d-flex align-items-center py-2 justify-content-center focus-eE rounded-xs"
+              type="submit">
+              <svg class="animate-spin d-none mr-2" xmlns="http://www.w3.org/2000/svg" height="18" width="18"
+                fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="white"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+              Iniciar sesión
+            </button>
+            <button type="button" data-forgot-pass-open data-dialog-hide class="btn mt-2 btn-forgot-password  bg-transparent w-100 px-0 py-2">
+              ¿Has olvidado tu contraseña?
+            </button>
+
+
+          </form>
+        </dialog>
+      </div>
+    </div>
+    <div id="community-norms">
+      <div class="overlay" data-dialog-hide hidden>
+        <dialog class="border position-absolute content-norms rounded-xs">
+          <button data-dialog-hide
+            class="position-absolute btn-close-overlay rounded-xs btn border-0 outline-light px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <article class="norms">
+            <h1 class="norms__title my-4">Normas de la Comunidad</h1>
+            <ol class="pl-4">
+              <li class="norms__item">
+                <p class="font-normal mb-1">
+                  El Economista no se hace responsable de las opiniones expresadas en los comentarios y los mismos no
+                  constituyen la
+                  opinión de elEconomista.
+                </p>
+              </li>
+              <li class="norms__item">
+                <p class="font-normal mb-1">
+                  El Economista no tiene obligación de controlar la utilización de éstos por los usuarios y no garantiza
+                  que se haga un uso diligente o prudente de los mismos.
+                </p>
+              </li>
+              <li class="norms__item">
+                <p class="font-normal mb-1">
+                  El Economista tiene la obligación de verificar y no verifica la identidad de los usuarios, ni la
+                  veracidad,
+                  vigencia, exhaustividad y/o autenticidad de los datos que los usuarios proporcionan y excluye
+                  cualquier
+                  responsabilidad por los daños y perjuicios de toda naturaleza que pudieran deberse a la utilización de
+                  los mismos
+                  o que puedan deberse a la ilicitud, carácter lesivo, falta de veracidad, vigencia, exhaustividad y/o
+                  autenticidad
+                  de la información proporcionada.
+                </p>
+              </li>
+            </ol>
+
+
+            <button id="accept-norms" class="btn w-100 bg-economista py-2 mt-3 focus-eE" data-dialog-hide
+              aria-label="Aceptar normas de la comunidad" data-accept-norms for="norms">
+              Aceptar y continuar
+            </button>
+          </article>
+        </dialog>
+      </div>
+    </div>
+    <div id="sign-up" class="sign-up" data-log>
+      <div class="overlay" hidden data-dialog-hide>
+        <dialog class="content d-flex d-flex flex-column flex-md-row p-0 border-0 rounded-xs">
+          <button data-dialog-hide
+            class="position-absolute btn-close-overlay rounded-xs btn border-0 outline-light px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <section
+            class="sign-up__image col-12 col-md-6 px-0 d-none d-md-flex justify-content-center align-items-center">
+            <img src="//s03.s3c.es/imag3/logos/economista/svg/economista15-aniv.svg" alt="elEconomista.es" height="59"
+              width="343">
+          </section>
+          <section class="form-sign-up col-12 col-md-6 py-5 mx-auto px-3 px-lg-5">
+            <img class="d-block mx-auto d-md-none"
+              src="https://s03.s3c.es/imag3/logos/economista/svg/economista15-aniv.svg" height="59" width="205" alt="">
+            <h1 class="form-sign-up__title text-center mb-4 d-none d-md-block">Regístrate en elEconomista</h1>
+            <form class="comment__form d-flex flex-column p-1 px-lg-5" id="form-sign-up">
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="nombre">
+                <span class="d-block input-span pl-2">Nombre</span>
+                <input type="text" name="nombre"
+                  class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="nombre"
+                  required>
+              </label>
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="apellidos">
+                <span class="d-block input-span pl-2">Apellidos</span>
+                <input type="text" name="apellidos"
+                  class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="apellidos"
+                  required>
+              </label>
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="alias">
+                <span class="d-block input-span pl-2">Alias</span>
+                <input type="text" name="alias"
+                  class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="alias" required>
+              </label>
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="email">
+                <span class="d-block input-span pl-2">Email</span>
+                <input type="email" name="email"
+                  class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="email" required>
+              </label>
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="password">
+                <span class="d-block input-span pl-2">Contraseña</span>
+                <input type="password" name="password"
+                  class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="password"
+                  required>
+              </label>
+              <label class="mt-1 w-100 px-0 mx-auto d-flex flex-wrap align-items-center" for="politica-privacidad"
+                aria-label="Acepto la política de privacidad y condiciones">
+                <input required type="checkbox" name="politica-privacidad" id="politica-privacidad"
+                  class="focus-eE rounded-xs mr-2">
+                <span class="d-inline-flex">
+                  Acepto la&nbsp;
+                </span>
+                <a href="https://www.eleconomista.es/politica-de-privacidad/index-2018-05-25.php" target="_blank"
+                  class="btn outline-light p-0 focus-eE rounded-xs text-economista text-xs bg-transparent border-0">
+                  política de privacidad y condiciones
+                </a>
+              </label>
+              <label class="mt-1 w-100 px-0 mx-auto d-flex flex-wrap align-items-center" for="recibir-news"
+                aria-label="Recibir newsletters de elEconomista">
+                <input type="checkbox" name="recibir-news" id="recibir-news" class="focus-eE rounded-xs mr-2">
+                Recibir newsletters de elEconomista
+                </a>
+              </label>
+              <label class="mt-1 w-100 px-0 mx-auto d-flex flex-wrap align-items-center" for="recibir-comunicaciones"
+                aria-label="Recibir comunicaciones de elEconomista">
+                <input type="checkbox" name="recibir-comunicaciones" id="recibir-comunicaciones"
+                  class="focus-eE rounded-xs mr-2">
+                Recibir comunicaciones de elEconomista
+                </a>
+              </label>
+              <button class="btn w-100 bg-economista py-2 focus-eE rounded-xs my-1 mb-lg-2" aria-label="Selected all"
+                type="submit">
+                <svg class="animate-spin d-none mr-2" xmlns="http://www.w3.org/2000/svg" height="18" width="18"
+                  fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="white"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                  </path>
+                </svg>
+                Marcar todo y confirmar
+              </button>
+              <button class="btn w-100  py-2 focus-eE rounded-xs" type="submit">
+                <svg class="animate-spin d-none mr-2" xmlns="http://www.w3.org/2000/svg" height="18" width="18"
+                  fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="white"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                  </path>
+                </svg>
+                Continuar con esta selección
+              </button>
+            </form>
+          </section>
+        </dialog>
+      </div>
+    </div>
+    <div id="forgot-passsword" class="forgot-passsword" data-forgot>
+      <div class="overlay" data-dialog-hide="" hidden>
+        <dialog class="d-flex flex-column p-0 border-0 rounded-xs">
+          <button data-dialog-hide="" class="position-absolute btn-close-overlay rounded-xs btn border-0 outline-light px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button> 
+          <section class="form-forgot-passsword col-12 py-5 mx-auto px-3 px-lg-5">
+            <img class="d-block my-3" src="https://s03.s3c.es/imag3/logos/economista/svg/economista15-aniv.svg" height="59" width="205" alt="">
+            <h1 class="form-forgot-passsword__title h4 text-left mb-4 d-none d-md-block">Olvidaste tu contraseña?</h1>
+            <p class="font-normal">
+              Ingresa la dirección de correo electrónico que usaste cuando te uniste y te enviaremos instrucciones para restablecer tu contraseña.
+            </p>
+            <p class="font-normal mb-4">
+              Por razones de seguridad, NO almacenamos su contraseña. Así que tenga la seguridad de que nunca le enviaremos su contraseña por correo electrónico.
+            </p>
+            <form class="comment__form d-flex flex-column" id="form-forgot-passsword">
+              <label class="comment__form--label w-full d-block position-relative mb-1 mb-md-2" for="email">
+                <span class="d-block input-span pl-2">Email</span>
+                <input type="text" name="email" class="comment__form-input w-100 pt-4 pb-2 px-2 form-control focus-eE rounded-xs" id="email" required="">
+              </label>
+              <button
+              class="btn w-100 bg-economista text-white d-flex align-items-center py-2 justify-content-center focus-eE rounded-xs"
+              type="submit">
+              <span>Enviar Instrucciones</span>
+              <svg class="animate-spin d-none ml-2" xmlns="http://www.w3.org/2000/svg" height="18" width="18"
+                fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="black" stroke-width="4"></circle>
+                <path class="opacity-75" fill="white"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check d-none ml-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M9 12l2 2l4 -4"></path>
+             </svg>
+            </button>
+            </form>
+          </section>
+        </dialog>
+      </div>
+    </div>
+  </footer>
+  <link rel="stylesheet" type="text/css" href="//s03.s3c.es/css3/eleconomista/cache/app.min.242.cache.css"
+    media="all" />
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
